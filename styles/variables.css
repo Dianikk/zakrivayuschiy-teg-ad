@@ -1,1 +1,22 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+/* styles/variables.css */
+:root {
+    --main-font: 'Inter', 'Arial', sans-serif;
+    --accent-font: 'PressStart2P', 'Courier New', monospace;
+    
+    --main-font-weight: 400;
+    --title-font-weight: 700;
+    
+    --background-color: #d3d3d3;
+    --accent-color: #000000;
+    --text-color: #000000;
+    
+    --button-text-color: #ffffff;
+    --button-bg-color: #000000;
+    
+    --card-width: clamp(320px, 100%, 696px);
+    --header-width: clamp(320px, 100%, 696px);
+    --padding: clamp(10px, 5vw, 20px);
+    
+    --contour-color: #000000;
+    --animation-fill-color: #ff0000;
+}
