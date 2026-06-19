@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+</head>
+<body class="page">
+    <!-- Шапка -->
+    <header class="header">
+        <h1 class="header__title">Закрывающий тег</h1>
+        <!-- логотип и описание -->
+    </header>
+    
+    <!-- Основной контент -->
+    <main class="content">
+        <!-- 8 карточек -->
+        <article class="card">
+            <h2 class="card__title">Заголовок</h2>
+            <div class="card__image-wrapper">
+                <img class="card__image" src="..." alt="...">
+                <span class="card__label">Лейбл</span>
+            </div>
+            <p class="card__text">Текст...</p>
+            <div class="card__buttons">
+                <button class="card__like-button">
+                    <svg class="like-icon">...</svg>
+                    Like
+                </button>
+                <button class="card__save-button">
+                    <svg>...</svg>
+                    Сохранить на память
+                </button>
+            </div>
+        </article>
+    </main>
+    
+    <!-- Футер -->
+    <footer class="footer">
+        <!-- Контент футера -->
+    </footer>
+    
+    <!-- Модальное окно -->
+    <dialog class="modal">
+        <!-- Содержимое модалки -->
+    </dialog>
+</body>
 </html>
