@@ -4,7 +4,233 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей и/* ============================================
+   АНИМАЦИИ
+   ============================================ */
+
+/* ---------- АНИМАЦИЯ КНОПОК (ОБЩАЯ) ---------- */
+
+.card__like-button,
+.card__save-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-family: var(--accent-font);
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    font-weight: 400;
+    color: var(--button-text-color);
+    background-color: var(--button-bg-color);
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Псевдоэлемент для анимации при наведении */
+.card__like-button::before,
+.card__save-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--button-bg-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+}
+
+/* При наведении псевдоэлемент заполняет кнопку */
+.card__like-button:hover::before,
+.card__save-button:hover::before {
+    transform: scaleX(1);
+}
+
+/* Текст и иконки поверх псевдоэлемента */
+.card__like-button .button__text,
+.card__save-button .button__text,
+.card__save-button svg {
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+/* ---------- СОСТОЯНИЕ ФОКУСА КНОПОК ---------- */
+
+.card__like-button:focus,
+.card__save-button:focus {
+    outline: none;
+}
+
+.card__like-button:focus-visible,
+.card__save-button:focus-visible {
+    box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+/* ---------- КНОПКА С СЕРДЦЕМ (СПЕЦИАЛЬНЫЙ ФОКУС) ---------- */
+
+.card__like-button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* ---------- АНИМАЦИЯ СЕРДЦА ---------- */
+
+.like-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+}
+
+/* ---- HOVER ---- */
+
+/* Сердцевина при наведении */
+.like-icon:hover .core {
+    fill: var(--contour-color);
+    transition: fill 0.3s ease;
+}
+
+/* Основное тело при наведении (с задержкой) */
+.like-icon:hover .main-body {
+    fill: var(--contour-color);
+    transition: fill 0.3s ease 0.05s;
+}
+
+/* При уходе курсора - возврат */
+.like-icon .core {
+    transition: fill 0.3s ease 0.03s;
+}
+
+.like-icon .main-body {
+    transition: fill 0.3s ease;
+}
+
+/* ---- ACTIVE ---- */
+
+/* При зажатии мыши - красный цвет */
+.like-icon:active .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s ease;
+}
+
+.like-icon:active .main-body {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s ease 0.05s;
+}
+
+/* ---- IS-LIKED (КЛИК) ---- */
+
+/* Перекрашивание при клике */
+.like-icon.is-liked .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s ease;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s ease 0.05s;
+}
+
+/* Контур перекрашивается с задержкой */
+.like-icon.is-liked .contour {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s ease 0.06s;
+}
+
+/* Возврат контура при отключении лайка */
+.like-icon .contour {
+    transition: fill 0.1s linear;
+}
+
+/* ---- АНИМАЦИЯ МАСШТАБИРОВАНИЯ ---- */
+
+@keyframes heart-scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.25);
+    }
+}
+
+/* Запуск масштабирования при клике */
+.like-icon.is-liked .heart {
+    animation: heart-scale 0.3s ease-in 0.1s forwards;
+}
+
+/* ---- АНИМАЦИЯ ИСКР ---- */
+
+@keyframes sparks-visibility {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Запуск искр при клике */
+.like-icon.is-liked .sparks {
+    animation: sparks-visibility 0.3s ease-in 0.3s forwards;
+}
+
+/* ---------- АНИМАЦИЯ ДЛЯ КНОПКИ В МОДАЛЬНОМ ОКНЕ ---------- */
+
+.modal__button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    font-family: var(--accent-font);
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    color: var(--button-text-color);
+    background-color: var(--button-bg-color);
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.modal__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--button-bg-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.modal__button:hover::before {
+    transform: scaleX(1);
+}
+
+.modal__button .button__text {
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+.modal__button:focus {
+    outline: none;
+}
+
+.modal__button:focus-visible {
+    box-shadow: 2px 2px 0 var(--accent-color);
+}конку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
