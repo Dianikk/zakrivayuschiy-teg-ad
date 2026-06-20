@@ -4,50 +4,455 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Закрывающий тег</title>
+    
+    <!-- Подключение шрифтов -->
     <link rel="stylesheet" href="./fonts/fonts.css">
+    
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="./styles/globals.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/animations.css">
+    
+    <!-- Фавикон -->
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
 </head>
 <body class="page">
-    <!-- Шапка -->
+    <!-- ======== ШАПКА ======== -->
     <header class="header">
-        <h1 class="header__title">Закрывающий тег</h1>
-        <!-- логотип и описание -->
+        <p class="header__logo">Закрывающий тег</p>
+        <h1 class="header__title">&lt;/&gt;</h1>
+        <p class="header__description">Сайт о том, как я учился верстать</p>
     </header>
-    
-    <!-- Основной контент -->
+
+    <!-- ======== ОСНОВНОЙ КОНТЕНТ ======== -->
     <main class="content">
-        <!-- 8 карточек -->
+        
+        <!-- ===== КАРТОЧКА 1 ===== -->
         <article class="card">
-            <h2 class="card__title">Заголовок</h2>
+            <h2 class="card__title">Первые шаги в вёрстке</h2>
             <div class="card__image-wrapper">
-                <img class="card__image" src="..." alt="...">
-                <span class="card__label">Лейбл</span>
+                <img class="card__image card__image_filter-1" 
+                     src="./images/photo1.jpg" 
+                     alt="Мой первый HTML-документ"
+                     loading="lazy">
+                <span class="card__label">Начало</span>
             </div>
-            <p class="card__text">Текст...</p>
+            <p class="card__text">
+                Когда я впервые открыл VS Code и написал &lt;html&gt;, я чувствовал себя 
+                настоящим хакером. Хотя на самом деле я просто создал пустую страницу 
+                с заголовком "Привет, мир!".
+            </p>
             <div class="card__buttons">
                 <button class="card__like-button">
-                    <svg class="like-icon">...</svg>
-                    Like
+                    <svg class="like-icon" viewBox="0 0 100 100">
+                        <g class="heart">
+                            <path class="contour" d="M50 88 L15 45 C5 35 5 20 15 10 C25 0 40 5 50 15 C60 5 75 0 85 10 C95 20 95 35 85 45 L50 88Z" fill="var(--contour-color)"/>
+                            <path class="core" d="M50 75 L25 45 C18 38 18 28 25 21 C32 14 42 17 50 25 C58 17 68 14 75 21 C82 28 82 38 75 45 L50 75Z" fill="none"/>
+                            <path class="main-body" d="M50 80 L20 45 C12 37 12 25 20 17 C28 9 40 13 50 23 C60 13 72 9 80 17 C88 25 88 37 80 45 L50 80Z" fill="none"/>
+                        </g>
+                        <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                            <path d="M50 5 L52 15 L48 15 L50 5Z"/>
+                            <path d="M85 20 L75 25 L78 18 L85 20Z"/>
+                            <path d="M95 50 L85 48 L85 52 L95 50Z"/>
+                            <path d="M85 80 L75 75 L78 82 L85 80Z"/>
+                            <path d="M50 95 L52 85 L48 85 L50 95Z"/>
+                            <path d="M15 80 L25 75 L22 82 L15 80Z"/>
+                            <path d="M5 50 L15 48 L15 52 L5 50Z"/>
+                            <path d="M15 20 L25 25 L22 18 L15 20Z"/>
+                        </g>
+                    </svg>
+                    <span class="button__text">Like</span>
                 </button>
                 <button class="card__save-button">
-                    <svg>...</svg>
-                    Сохранить на память
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <use href="#disk-icon" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
                 </button>
             </div>
         </article>
+
+        <!-- ===== КАРТОЧКА 2 ===== -->
+        <article class="card">
+            <h2 class="card__title">Первый проект "Оно тебе надо"</h2>
+            <div class="card__image-wrapper">
+                <img class="card__image card__image_filter-2" 
+                     src="./images/photo2.jpg" 
+                     alt="Скриншот первого проекта"
+                     loading="lazy">
+                <span class="card__label">Волнение</span>
+            </div>
+            <p class="card__text">
+                Помню, как переживал перед сдачей проекта. Все эти гриды, флексы, 
+                оверлеи... Но когда я увидел готовую страницу в браузере, понял - 
+                это то, чем я хочу заниматься.
+            </p>
+            <div class="card__buttons">
+                <button class="card__like-button">
+                    <svg class="like-icon" viewBox="0 0 100 100">
+                        <g class="heart">
+                            <path class="contour" d="M50 88 L15 45 C5 35 5 20 15 10 C25 0 40 5 50 15 C60 5 75 0 85 10 C95 20 95 35 85 45 L50 88Z" fill="var(--contour-color)"/>
+                            <path class="core" d="M50 75 L25 45 C18 38 18 28 25 21 C32 14 42 17 50 25 C58 17 68 14 75 21 C82 28 82 38 75 45 L50 75Z" fill="none"/>
+                            <path class="main-body" d="M50 80 L20 45 C12 37 12 25 20 17 C28 9 40 13 50 23 C60 13 72 9 80 17 C88 25 88 37 80 45 L50 80Z" fill="none"/>
+                        </g>
+                        <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                            <path d="M50 5 L52 15 L48 15 L50 5Z"/>
+                            <path d="M85 20 L75 25 L78 18 L85 20Z"/>
+                            <path d="M95 50 L85 48 L85 52 L95 50Z"/>
+                            <path d="M85 80 L75 75 L78 82 L85 80Z"/>
+                            <path d="M50 95 L52 85 L48 85 L50 95Z"/>
+                            <path d="M15 80 L25 75 L22 82 L15 80Z"/>
+                            <path d="M5 50 L15 48 L15 52 L5 50Z"/>
+                            <path d="M15 20 L25 25 L22 18 L15 20Z"/>
+                        </g>
+                    </svg>
+                    <span class="button__text">Like</span>
+                </button>
+                <button class="card__save-button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <use href="#disk-icon" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- ===== КАРТОЧКА 3 ===== -->
+        <article class="card">
+            <h2 class="card__title">Посмотри в окно</h2>
+            <div class="card__image-wrapper">
+                <img class="card__image card__image_filter-3" 
+                     src="./images/photo3.jpg" 
+                     alt="Проект Посмотри в окно"
+                     loading="lazy">
+                <span class="card__label">Уверенность</span>
+            </div>
+            <p class="card__text">
+                Это был первый проект с JavaScript. Я научился работать с API, 
+                обрабатывать клики и подставлять видео. Чувствовал себя настоящим 
+                разработчиком!
+            </p>
+            <div class="card__buttons">
+                <button class="card__like-button">
+                    <svg class="like-icon" viewBox="0 0 100 100">
+                        <g class="heart">
+                            <path class="contour" d="M50 88 L15 45 C5 35 5 20 15 10 C25 0 40 5 50 15 C60 5 75 0 85 10 C95 20 95 35 85 45 L50 88Z" fill="var(--contour-color)"/>
+                            <path class="core" d="M50 75 L25 45 C18 38 18 28 25 21 C32 14 42 17 50 25 C58 17 68 14 75 21 C82 28 82 38 75 45 L50 75Z" fill="none"/>
+                            <path class="main-body" d="M50 80 L20 45 C12 37 12 25 20 17 C28 9 40 13 50 23 C60 13 72 9 80 17 C88 25 88 37 80 45 L50 80Z" fill="none"/>
+                        </g>
+                        <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                            <path d="M50 5 L52 15 L48 15 L50 5Z"/>
+                            <path d="M85 20 L75 25 L78 18 L85 20Z"/>
+                            <path d="M95 50 L85 48 L85 52 L95 50Z"/>
+                            <path d="M85 80 L75 75 L78 82 L85 80Z"/>
+                            <path d="M50 95 L52 85 L48 85 L50 95Z"/>
+                            <path d="M15 80 L25 75 L22 82 L15 80Z"/>
+                            <path d="M5 50 L15 48 L15 52 L5 50Z"/>
+                            <path d="M15 20 L25 25 L22 18 L15 20Z"/>
+                        </g>
+                    </svg>
+                    <span class="button__text">Like</span>
+                </button>
+                <button class="card__save-button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <use href="#disk-icon" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- ===== КАРТОЧКА 4 ===== -->
+        <article class="card">
+            <h2 class="card__title">Сложно сосредоточиться</h2>
+            <div class="card__image-wrapper">
+                <img class="card__image card__image_filter-4" 
+                     src="./images/photo4.jpg" 
+                     alt="Проект Сложно сосредоточиться"
+                     loading="lazy">
+                <span class="card__label">Сложно</span>
+            </div>
+            <p class="card__text">
+                Две темы, адаптив, CSS-переменные... Это был настоящий вызов! 
+                Но я справился и понял, как важна организация кода.
+            </p>
+            <div class="card__buttons">
+                <button class="card__like-button">
+                    <svg class="like-icon" viewBox="0 0 100 100">
+                        <g class="heart">
+                            <path class="contour" d="M50 88 L15 45 C5 35 5 20 15 10 C25 0 40 5 50 15 C60 5 75 0 85 10 C95 20 95 35 85 45 L50 88Z" fill="var(--contour-color)"/>
+                            <path class="core" d="M50 75 L25 45 C18 38 18 28 25 21 C32 14 42 17 50 25 C58 17 68 14 75 21 C82 28 82 38 75 45 L50 75Z" fill="none"/>
+                            <path class="main-body" d="M50 80 L20 45 C12 37 12 25 20 17 C28 9 40 13 50 23 C60 13 72 9 80 17 C88 25 88 37 80 45 L50 80Z" fill="none"/>
+                        </g>
+                        <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                            <path d="M50 5 L52 15 L48 15 L50 5Z"/>
+                            <path d="M85 20 L75 25 L78 18 L85 20Z"/>
+                            <path d="M95 50 L85 48 L85 52 L95 50Z"/>
+                            <path d="M85 80 L75 75 L78 82 L85 80Z"/>
+                            <path d="M50 95 L52 85 L48 85 L50 95Z"/>
+                            <path d="M15 80 L25 75 L22 82 L15 80Z"/>
+                            <path d="M5 50 L15 48 L15 52 L5 50Z"/>
+                            <path d="M15 20 L25 25 L22 18 L15 20Z"/>
+                        </g>
+                    </svg>
+                    <span class="button__text">Like</span>
+                </button>
+                <button class="card__save-button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <use href="#disk-icon" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- ===== КАРТОЧКА 5 ===== -->
+        <article class="card">
+            <h2 class="card__title">Адаптивная вёрстка</h2>
+            <div class="card__image-wrapper">
+                <img class="card__image card__image_filter-5" 
+                     src="./images/photo5.jpg" 
+                     alt="Адаптивная вёрстка"
+                     loading="lazy">
+                <span class="card__label">Рост</span>
+            </div>
+            <p class="card__text">
+                Мобильные устройства - это целый мир. Я научился делать сайты, 
+                которые красиво выглядят на любом экране. Clamp, медиазапросы, 
+                резиновая верстка - теперь это мои лучшие друзья.
+            </p>
+            <div class="card__buttons">
+                <button class="card__like-button">
+                    <svg class="like-icon" viewBox="0 0 100 100">
+                        <g class="heart">
+                            <path class="contour" d="M50 88 L15 45 C5 35 5 20 15 10 C25 0 40 5 50 15 C60 5 75 0 85 10 C95 20 95 35 85 45 L50 88Z" fill="var(--contour-color)"/>
+                            <path class="core" d="M50 75 L25 45 C18 38 18 28 25 21 C32 14 42 17 50 25 C58 17 68 14 75 21 C82 28 82 38 75 45 L50 75Z" fill="none"/>
+                            <path class="main-body" d="M50 80 L20 45 C12 37 12 25 20 17 C28 9 40 13 50 23 C60 13 72 9 80 17 C88 25 88 37 80 45 L50 80Z" fill="none"/>
+                        </g>
+                        <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                            <path d="M50 5 L52 15 L48 15 L50 5Z"/>
+                            <path d="M85 20 L75 25 L78 18 L85 20Z"/>
+                            <path d="M95 50 L85 48 L85 52 L95 50Z"/>
+                            <path d="M85 80 L75 75 L78 82 L85 80Z"/>
+                            <path d="M50 95 L52 85 L48 85 L50 95Z"/>
+                            <path d="M15 80 L25 75 L22 82 L15 80Z"/>
+                            <path d="M5 50 L15 48 L15 52 L5 50Z"/>
+                            <path d="M15 20 L25 25 L22 18 L15 20Z"/>
+                        </g>
+                    </svg>
+                    <span class="button__text">Like</span>
+                </button>
+                <button class="card__save-button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <use href="#disk-icon" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- ===== КАРТОЧКА 6 ===== -->
+        <article class="card">
+            <h2 class="card__title">Анимации</h2>
+            <div class="card__image-wrapper">
+                <img class="card__image card__image_filter-6" 
+                     src="./images/photo6.jpg" 
+                     alt="CSS анимации"
+                     loading="lazy">
+                <span class="card__label">Вдохновение</span>
+            </div>
+            <p class="card__text">
+                Анимации - это магия. Когда я увидел, как сердце бьется и искры 
+                разлетаются, я понял - CSS способен на настоящие чудеса.
+            </p>
+            <div class="card__buttons">
+                <button class="card__like-button">
+                    <svg class="like-icon" viewBox="0 0 100 100">
+                        <g class="heart">
+                            <path class="contour" d="M50 88 L15 45 C5 35 5 20 15 10 C25 0 40 5 50 15 C60 5 75 0 85 10 C95 20 95 35 85 45 L50 88Z" fill="var(--contour-color)"/>
+                            <path class="core" d="M50 75 L25 45 C18 38 18 28 25 21 C32 14 42 17 50 25 C58 17 68 14 75 21 C82 28 82 38 75 45 L50 75Z" fill="none"/>
+                            <path class="main-body" d="M50 80 L20 45 C12 37 12 25 20 17 C28 9 40 13 50 23 C60 13 72 9 80 17 C88 25 88 37 80 45 L50 80Z" fill="none"/>
+                        </g>
+                        <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                            <path d="M50 5 L52 15 L48 15 L50 5Z"/>
+                            <path d="M85 20 L75 25 L78 18 L85 20Z"/>
+                            <path d="M95 50 L85 48 L85 52 L95 50Z"/>
+                            <path d="M85 80 L75 75 L78 82 L85 80Z"/>
+                            <path d="M50 95 L52 85 L48 85 L50 95Z"/>
+                            <path d="M15 80 L25 75 L22 82 L15 80Z"/>
+                            <path d="M5 50 L15 48 L15 52 L5 50Z"/>
+                            <path d="M15 20 L25 25 L22 18 L15 20Z"/>
+                        </g>
+                    </svg>
+                    <span class="button__text">Like</span>
+                </button>
+                <button class="card__save-button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <use href="#disk-icon" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- ===== КАРТОЧКА 7 ===== -->
+        <article class="card">
+            <h2 class="card__title">Финальный проект</h2>
+            <div class="card__image-wrapper">
+                <img class="card__image card__image_filter-7" 
+                     src="./images/photo7.jpg" 
+                     alt="Финальный проект Закрывающий тег"
+                     loading="lazy">
+                <span class="card__label">Гордость</span>
+            </div>
+            <p class="card__text">
+                Этот проект - мое достижение. Фильтры, анимации, адаптив, 
+                модальное окно - я собрал все знания в одном месте. 
+                Я готов к новым вызовам!
+            </p>
+            <div class="card__buttons">
+                <button class="card__like-button">
+                    <svg class="like-icon" viewBox="0 0 100 100">
+                        <g class="heart">
+                            <path class="contour" d="M50 88 L15 45 C5 35 5 20 15 10 C25 0 40 5 50 15 C60 5 75 0 85 10 C95 20 95 35 85 45 L50 88Z" fill="var(--contour-color)"/>
+                            <path class="core" d="M50 75 L25 45 C18 38 18 28 25 21 C32 14 42 17 50 25 C58 17 68 14 75 21 C82 28 82 38 75 45 L50 75Z" fill="none"/>
+                            <path class="main-body" d="M50 80 L20 45 C12 37 12 25 20 17 C28 9 40 13 50 23 C60 13 72 9 80 17 C88 25 88 37 80 45 L50 80Z" fill="none"/>
+                        </g>
+                        <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                            <path d="M50 5 L52 15 L48 15 L50 5Z"/>
+                            <path d="M85 20 L75 25 L78 18 L85 20Z"/>
+                            <path d="M95 50 L85 48 L85 52 L95 50Z"/>
+                            <path d="M85 80 L75 75 L78 82 L85 80Z"/>
+                            <path d="M50 95 L52 85 L48 85 L50 95Z"/>
+                            <path d="M15 80 L25 75 L22 82 L15 80Z"/>
+                            <path d="M5 50 L15 48 L15 52 L5 50Z"/>
+                            <path d="M15 20 L25 25 L22 18 L15 20Z"/>
+                        </g>
+                    </svg>
+                    <span class="button__text">Like</span>
+                </button>
+                <button class="card__save-button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <use href="#disk-icon" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- ===== КАРТОЧКА 8 ===== -->
+        <article class="card">
+            <h2 class="card__title">В путь!</h2>
+            <div class="card__image-wrapper">
+                <img class="card__image card__image_filter-8" 
+                     src="./images/photo8.jpg" 
+                     alt="Новые горизонты"
+                     loading="lazy">
+                <span class="card__label">Вперёд</span>
+            </div>
+            <p class="card__text">
+                Этот проект - не финиш, а старт. Теперь я умею верстать, 
+                анимировать, адаптировать и создавать крутые сайты. 
+                Спасибо, Яндекс Практикум!
+            </p>
+            <div class="card__buttons">
+                <button class="card__like-button">
+                    <svg class="like-icon" viewBox="0 0 100 100">
+                        <g class="heart">
+                            <path class="contour" d="M50 88 L15 45 C5 35 5 20 15 10 C25 0 40 5 50 15 C60 5 75 0 85 10 C95 20 95 35 85 45 L50 88Z" fill="var(--contour-color)"/>
+                            <path class="core" d="M50 75 L25 45 C18 38 18 28 25 21 C32 14 42 17 50 25 C58 17 68 14 75 21 C82 28 82 38 75 45 L50 75Z" fill="none"/>
+                            <path class="main-body" d="M50 80 L20 45 C12 37 12 25 20 17 C28 9 40 13 50 23 C60 13 72 9 80 17 C88 25 88 37 80 45 L50 80Z" fill="none"/>
+                        </g>
+                        <g class="sparks" fill="var(--animation-fill-color)" opacity="0">
+                            <path d="M50 5 L52 15 L48 15 L50 5Z"/>
+                            <path d="M85 20 L75 25 L78 18 L85 20Z"/>
+                            <path d="M95 50 L85 48 L85 52 L95 50Z"/>
+                            <path d="M85 80 L75 75 L78 82 L85 80Z"/>
+                            <path d="M50 95 L52 85 L48 85 L50 95Z"/>
+                            <path d="M15 80 L25 75 L22 82 L15 80Z"/>
+                            <path d="M5 50 L15 48 L15 52 L5 50Z"/>
+                            <path d="M15 20 L25 25 L22 18 L15 20Z"/>
+                        </g>
+                    </svg>
+                    <span class="button__text">Like</span>
+                </button>
+                <button class="card__save-button">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                        <use href="#disk-icon" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
+                </button>
+            </div>
+        </article>
+
     </main>
-    
-    <!-- Футер -->
+
+    <!-- ======== ФУТЕР ======== -->
     <footer class="footer">
-        <!-- Контент футера -->
+        <p class="footer__text">Закрывающий тег &copy; 2024</p>
     </footer>
-    
-    <!-- Модальное окно -->
-    <dialog class="modal">
-        <!-- Содержимое модалки -->
+
+    <!-- ======== МОДАЛЬНОЕ ОКНО ======== -->
+    <dialog class="modal" id="modal">
+        <div class="modal__content">
+            <svg class="modal__icon" width="42" height="42" viewBox="0 0 21 21" fill="none">
+                <use href="#disk-icon" />
+            </svg>
+            <p class="modal__text">
+                Сохранить эту карточку<br>
+                на память?
+            </p>
+        </div>
+        <button class="modal__button" id="modal-close">
+            <span class="button__text">Ок</span>
+        </button>
     </dialog>
+
+    <!-- ======== SVG СПРАЙТ (symbol) ======== -->
+    <svg style="display: none;">
+        <symbol id="disk-icon" viewBox="0 0 21 21">
+            <path d="M3.5 1.5H17.5C18.6046 1.5 19.5 2.39543 19.5 3.5V17.5C19.5 18.6046 18.6046 19.5 17.5 19.5H3.5C2.39543 19.5 1.5 18.6046 1.5 17.5V3.5C1.5 2.39543 2.39543 1.5 3.5 1.5Z" 
+                  stroke="currentColor" stroke-width="2"/>
+            <rect x="5" y="5" width="5" height="5" fill="currentColor"/>
+            <rect x="12" y="13" width="4" height="4" fill="currentColor"/>
+        </symbol>
+    </svg>
+
+    <!-- ======== СКРИПТЫ ======== -->
+    <script>
+        // ---------- МОДАЛЬНОЕ ОКНО ----------
+        const modal = document.getElementById('modal');
+        const saveButtons = document.querySelectorAll('.card__save-button');
+        const closeButton = document.getElementById('modal-close');
+
+        saveButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modal.showModal();
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            modal.close();
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.close();
+            }
+        });
+
+        // ---------- ЛАЙКИ ----------
+        const likeButtons = document.querySelectorAll('.card__like-button');
+        
+        likeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const icon = this.querySelector('.like-icon');
+                icon.classList.toggle('is-liked');
+            });
+        });
+    </script>
 </body>
 </html>
