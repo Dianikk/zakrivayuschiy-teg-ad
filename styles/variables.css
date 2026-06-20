@@ -1,11 +1,20 @@
-/* styles/variables.css */
+/* ============================================
+   ПЕРЕМЕННЫЕ ПРОЕКТА
+   ============================================ */
+
 :root {
+    /* ---------- ШРИФТЫ ---------- */
     --main-font: 'Inter', 'Arial', sans-serif;
     --accent-font: 'PressStart2P', 'Courier New', monospace;
     
+    /* Веса шрифтов */
     --main-font-weight: 400;
     --title-font-weight: 700;
     
+    /* Настройки вариативного шрифта */
+    --font-variation: 'wght' var(--main-font-weight);
+    
+    /* ---------- ЦВЕТА ---------- */
     --background-color: #d3d3d3;
     --accent-color: #000000;
     --text-color: #000000;
@@ -13,10 +22,28 @@
     --button-text-color: #ffffff;
     --button-bg-color: #000000;
     
-    --card-width: clamp(320px, 100%, 696px);
-    --header-width: clamp(320px, 100%, 696px);
-    --padding: clamp(10px, 5vw, 20px);
-    
+    /* Цвета для анимации сердца */
     --contour-color: #000000;
     --animation-fill-color: #ff0000;
+    
+    /* Обводка лейбла */
+    --label-stroke-color: #000000;
+    
+    /* ---------- РАЗМЕРЫ ---------- */
+    --header-width-mobile: 320px;
+    --header-width: clamp(320px, 100%, 696px);
+    
+    --card-width-mobile: 320px;
+    --card-width: clamp(320px, 100%, 696px);
+    
+    /* ---------- ОТСТУПЫ ---------- */
+    --padding-mobile: 10px;
+    --padding-tablet: 20px;
+    --padding-desktop: 30px;
+    
+    /* ---------- ФОН ---------- */
+    --bg-gradient: 
+        repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
+        repeating-linear-gradient(180deg, #d3d3d3 0px 2px, transparent 2px 4px),
+        linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
 }
